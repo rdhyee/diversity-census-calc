@@ -73,6 +73,13 @@ def tracts(variables='NAME'):
             for tract in c.sf1.get(variables,geo=tracts_in_county):
                 yield tract
 
+def places(variables="NAME"):
+    
+    for state in us.states.STATES:
+        print (state)
+        geo = {'for':'place:*', 'in':'state:{s_fips}'.format(s_fips=state.fips)}
+        for place in c.sf1.get(variables, geo=geo):
+            yield place
 
 def msas(variables="NAME"):
     
