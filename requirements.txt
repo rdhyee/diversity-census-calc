@@ -1,4 +1,5 @@
 census==0.8.3
+us
 numpy
 scipy
 matplotlib
